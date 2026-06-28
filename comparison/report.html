@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IRON PAN Visual Comparison Report</title>
+  <style>
+    :root {
+      --bg: #f7f3eb;
+      --card: #fff;
+      --text: #213e36;
+      --muted: #5a5a5a;
+      --good: #2e7d32;
+      --warn: #ed6c02;
+      --bad: #c62828;
+      --border: #d9d0c3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Poppins, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { width: min(1200px, 100% - 2rem); margin: 0 auto; padding: 2rem 0 3rem; }
+    h1 { font-family: "EB Garamond", Georgia, serif; font-size: 2.25rem; margin: 0 0 0.5rem; }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .summary div {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+    }
+    .summary strong { display: block; font-size: 1.75rem; }
+    .summary span { color: var(--muted); font-size: 0.875rem; }
+    .page-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .page-card__header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: start;
+      margin-bottom: 1rem;
+    }
+    .page-card h2 { margin: 0; font-size: 1.25rem; }
+    .path { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.875rem; }
+    .similarity {
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .similarity--good { background: #e8f5e9; color: var(--good); }
+    .similarity--warn { background: #fff3e0; color: var(--warn); }
+    .similarity--bad { background: #ffebee; color: var(--bad); }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem 1rem;
+      margin: 0 0 1rem;
+      font-size: 0.875rem;
+    }
+    .meta dt { color: var(--muted); font-weight: 600; }
+    .meta dd { margin: 0.15rem 0 0; word-break: break-all; }
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    figure { margin: 0; }
+    figcaption {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--muted);
+    }
+    .shots img {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+    }
+    @media (max-width: 900px) {
+      .shots { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Visual Comparison Report</h1>
+    <p>Comparing <strong>https://ironpan808.com</strong> vs <strong>http://localhost:3000</strong></p>
+    <div class="summary">
+      <div><strong>6</strong><span>Pages compared</span></div>
+      <div><strong>99.4%</strong><span>Average similarity</span></div>
+      <div><strong>98.52%</strong><span>Lowest similarity</span></div>
+      <div><strong>100%</strong><span>Highest similarity</span></div>
+    </div>
+    <article class="page-card">
+  <header class="page-card__header">
+    <div>
+      <h2>IRON PAN | Vietnamese Restaurant in Honolulu, HI 96826</h2>
+      <p class="path">/</p>
+    </div>
+    <div class="similarity similarity--good">100%</div>
+  </header>
+  <dl class="meta">
+    <div><dt>Old</dt><dd><a href="https://ironpan808.com/" target="_blank" rel="noopener">https://ironpan808.com/</a></dd></div>
+    <div><dt>New</dt><dd><a href="http://localhost:3000/pages/index.html" target="_blank" rel="noopener">http://localhost:3000/pages/index.html</a></dd></div>
+    <div><dt>Dimensions</dt><dd>1440 × 3966px</dd></div>
+    <div><dt>Diff pixels</dt><dd>0 / 5,711,040</dd></div>
+  </dl>
+  <div class="shots">
+    <figure><figcaption>Original</figcaption><a href="old/home.png"><img src="old/home.png" alt="Original home" loading="lazy"></a></figure>
+    <figure><figcaption>Rebuild</figcaption><a href="new/home.png"><img src="new/home.png" alt="Rebuild home" loading="lazy"></a></figure>
+    <figure><figcaption>Diff</figcaption><a href="diff/home.png"><img src="diff/home.png" alt="Diff home" loading="lazy"></a></figure>
+  </div>
+</article>
+<article class="page-card">
+  <header class="page-card__header">
+    <div>
+      <h2>About us - IRON PAN</h2>
+      <p class="path">/about-us</p>
+    </div>
+    <div class="similarity similarity--good">99.19%</div>
+  </header>
+  <dl class="meta">
+    <div><dt>Old</dt><dd><a href="https://ironpan808.com/about-us" target="_blank" rel="noopener">https://ironpan808.com/about-us</a></dd></div>
+    <div><dt>New</dt><dd><a href="http://localhost:3000/pages/about-us.html" target="_blank" rel="noopener">http://localhost:3000/pages/about-us.html</a></dd></div>
+    <div><dt>Dimensions</dt><dd>1440 × 2159px</dd></div>
+    <div><dt>Diff pixels</dt><dd>25,305 / 3,108,960</dd></div>
+  </dl>
+  <div class="shots">
+    <figure><figcaption>Original</figcaption><a href="old/about-us.png"><img src="old/about-us.png" alt="Original about-us" loading="lazy"></a></figure>
+    <figure><figcaption>Rebuild</figcaption><a href="new/about-us.png"><img src="new/about-us.png" alt="Rebuild about-us" loading="lazy"></a></figure>
+    <figure><figcaption>Diff</figcaption><a href="diff/about-us.png"><img src="diff/about-us.png" alt="Diff about-us" loading="lazy"></a></figure>
+  </div>
+</article>
+<article class="page-card">
+  <header class="page-card__header">
+    <div>
+      <h2>Contact us - IRON PAN</h2>
+      <p class="path">/contact-us</p>
+    </div>
+    <div class="similarity similarity--good">98.52%</div>
+  </header>
+  <dl class="meta">
+    <div><dt>Old</dt><dd><a href="https://ironpan808.com/contact-us" target="_blank" rel="noopener">https://ironpan808.com/contact-us</a></dd></div>
+    <div><dt>New</dt><dd><a href="http://localhost:3000/pages/contact-us.html" target="_blank" rel="noopener">http://localhost:3000/pages/contact-us.html</a></dd></div>
+    <div><dt>Dimensions</dt><dd>1440 × 1766px</dd></div>
+    <div><dt>Diff pixels</dt><dd>37,693 / 2,543,040</dd></div>
+  </dl>
+  <div class="shots">
+    <figure><figcaption>Original</figcaption><a href="old/contact-us.png"><img src="old/contact-us.png" alt="Original contact-us" loading="lazy"></a></figure>
+    <figure><figcaption>Rebuild</figcaption><a href="new/contact-us.png"><img src="new/contact-us.png" alt="Rebuild contact-us" loading="lazy"></a></figure>
+    <figure><figcaption>Diff</figcaption><a href="diff/contact-us.png"><img src="diff/contact-us.png" alt="Diff contact-us" loading="lazy"></a></figure>
+  </div>
+</article>
+<article class="page-card">
+  <header class="page-card__header">
+    <div>
+      <h2>Gallery - IRON PAN</h2>
+      <p class="path">/gallery</p>
+    </div>
+    <div class="similarity similarity--good">99.25%</div>
+  </header>
+  <dl class="meta">
+    <div><dt>Old</dt><dd><a href="https://ironpan808.com/gallery" target="_blank" rel="noopener">https://ironpan808.com/gallery</a></dd></div>
+    <div><dt>New</dt><dd><a href="http://localhost:3000/pages/gallery.html" target="_blank" rel="noopener">http://localhost:3000/pages/gallery.html</a></dd></div>
+    <div><dt>Dimensions</dt><dd>1440 × 3389px</dd></div>
+    <div><dt>Diff pixels</dt><dd>36,497 / 4,880,160</dd></div>
+  </dl>
+  <div class="shots">
+    <figure><figcaption>Original</figcaption><a href="old/gallery.png"><img src="old/gallery.png" alt="Original gallery" loading="lazy"></a></figure>
+    <figure><figcaption>Rebuild</figcaption><a href="new/gallery.png"><img src="new/gallery.png" alt="Rebuild gallery" loading="lazy"></a></figure>
+    <figure><figcaption>Diff</figcaption><a href="diff/gallery.png"><img src="diff/gallery.png" alt="Diff gallery" loading="lazy"></a></figure>
+  </div>
+</article>
+<article class="page-card">
+  <header class="page-card__header">
+    <div>
+      <h2>Menu - IRON PAN</h2>
+      <p class="path">/menu</p>
+    </div>
+    <div class="similarity similarity--good">99.42%</div>
+  </header>
+  <dl class="meta">
+    <div><dt>Old</dt><dd><a href="https://ironpan808.com/menu" target="_blank" rel="noopener">https://ironpan808.com/menu</a></dd></div>
+    <div><dt>New</dt><dd><a href="http://localhost:3000/pages/menu.html" target="_blank" rel="noopener">http://localhost:3000/pages/menu.html</a></dd></div>
+    <div><dt>Dimensions</dt><dd>1440 × 4506px</dd></div>
+    <div><dt>Diff pixels</dt><dd>37,731 / 6,488,640</dd></div>
+  </dl>
+  <div class="shots">
+    <figure><figcaption>Original</figcaption><a href="old/menu.png"><img src="old/menu.png" alt="Original menu" loading="lazy"></a></figure>
+    <figure><figcaption>Rebuild</figcaption><a href="new/menu.png"><img src="new/menu.png" alt="Rebuild menu" loading="lazy"></a></figure>
+    <figure><figcaption>Diff</figcaption><a href="diff/menu.png"><img src="diff/menu.png" alt="Diff menu" loading="lazy"></a></figure>
+  </div>
+</article>
+<article class="page-card">
+  <header class="page-card__header">
+    <div>
+      <h2>QR Code - IRON PAN</h2>
+      <p class="path">/qr-code</p>
+    </div>
+    <div class="similarity similarity--good">100%</div>
+  </header>
+  <dl class="meta">
+    <div><dt>Old</dt><dd><a href="https://ironpan808.com/qr-code" target="_blank" rel="noopener">https://ironpan808.com/qr-code</a></dd></div>
+    <div><dt>New</dt><dd><a href="http://localhost:3000/pages/qr-code.html" target="_blank" rel="noopener">http://localhost:3000/pages/qr-code.html</a></dd></div>
+    <div><dt>Dimensions</dt><dd>1440 × 900px</dd></div>
+    <div><dt>Diff pixels</dt><dd>0 / 1,296,000</dd></div>
+  </dl>
+  <div class="shots">
+    <figure><figcaption>Original</figcaption><a href="old/qr-code.png"><img src="old/qr-code.png" alt="Original qr-code" loading="lazy"></a></figure>
+    <figure><figcaption>Rebuild</figcaption><a href="new/qr-code.png"><img src="new/qr-code.png" alt="Rebuild qr-code" loading="lazy"></a></figure>
+    <figure><figcaption>Diff</figcaption><a href="diff/qr-code.png"><img src="diff/qr-code.png" alt="Diff qr-code" loading="lazy"></a></figure>
+  </div>
+</article>
+  </div>
+</body>
+</html>

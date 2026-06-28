@@ -1,0 +1,24 @@
+:root {
+  --color-primary: #213e36;
+  --color-primary-dark: #1a322c;
+  --color-accent: #c8956c;
+  --color-accent-hover: #b07d4f;
+  --color-cream: #f7f3eb;
+  --color-cream-dark: #ebe4d6;
+  --color-white: #ffffff;
+  --color-text: #2c2c2c;
+  --color-text-muted: #5a5a5a;
+  --color-border: #d9d0c3;
+
+  --font-heading: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Poppins", system-ui, -apple-system, sans-serif;
+
+  --container-max: 1200px;
+  --header-height: 88px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 8px rgba(33, 62, 54, 0.08);
+  --shadow-md: 0 8px 24px rgba(33, 62, 54, 0.12);
+  --transition: 0.25s ease;
+}

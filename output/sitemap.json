@@ -1,0 +1,106 @@
+{
+  "site": "https://ironpan808.com",
+  "crawled_at": "2026-06-28T00:40:35.572071+00:00",
+  "total_pages": 6,
+  "pages": [
+    {
+      "url": "https://ironpan808.com/",
+      "path": "/",
+      "title": "IRON PAN | Vietnamese Restaurant in Honolulu, HI 96826",
+      "meta_description": "IRON PAN - Vietnamese Restaurant on S King St, Honolulu, HI 96826. Visit IRON PAN today for authentic Vietnamese cuisine, fresh ingredients, and a welcoming dining experience near Waikiki!",
+      "status_code": 200,
+      "error": "",
+      "image_count": 26,
+      "asset_count": 14,
+      "internal_links": [
+        "https://ironpan808.com/",
+        "https://ironpan808.com/about-us",
+        "https://ironpan808.com/contact-us",
+        "https://ironpan808.com/gallery",
+        "https://ironpan808.com/menu"
+      ]
+    },
+    {
+      "url": "https://ironpan808.com/about-us",
+      "path": "/about-us",
+      "title": "About us - IRON PAN",
+      "meta_description": "WELCOME TO IRON PAN! IRON PAN was created from a simple belief — some of the best memories begin around a hot pan and a warm loaf of bread. Inspired by the",
+      "status_code": 200,
+      "error": "",
+      "image_count": 22,
+      "asset_count": 14,
+      "internal_links": [
+        "https://ironpan808.com/",
+        "https://ironpan808.com/about-us",
+        "https://ironpan808.com/contact-us",
+        "https://ironpan808.com/gallery",
+        "https://ironpan808.com/menu"
+      ]
+    },
+    {
+      "url": "https://ironpan808.com/contact-us",
+      "path": "/contact-us",
+      "title": "Contact us - IRON PAN",
+      "meta_description": "Contact Us Contact Business Hours Social Facebook Instagram Yelp",
+      "status_code": 200,
+      "error": "",
+      "image_count": 14,
+      "asset_count": 14,
+      "internal_links": [
+        "https://ironpan808.com/",
+        "https://ironpan808.com/about-us",
+        "https://ironpan808.com/contact-us",
+        "https://ironpan808.com/gallery",
+        "https://ironpan808.com/menu"
+      ]
+    },
+    {
+      "url": "https://ironpan808.com/gallery",
+      "path": "/gallery",
+      "title": "Gallery - IRON PAN",
+      "meta_description": "Gallery",
+      "status_code": 200,
+      "error": "",
+      "image_count": 202,
+      "asset_count": 14,
+      "internal_links": [
+        "https://ironpan808.com/",
+        "https://ironpan808.com/about-us",
+        "https://ironpan808.com/contact-us",
+        "https://ironpan808.com/gallery",
+        "https://ironpan808.com/menu"
+      ]
+    },
+    {
+      "url": "https://ironpan808.com/menu",
+      "path": "/menu",
+      "title": "Menu - IRON PAN",
+      "meta_description": "SIGNATURE SKILLETS",
+      "status_code": 200,
+      "error": "",
+      "image_count": 46,
+      "asset_count": 14,
+      "internal_links": [
+        "https://ironpan808.com/",
+        "https://ironpan808.com/about-us",
+        "https://ironpan808.com/contact-us",
+        "https://ironpan808.com/gallery",
+        "https://ironpan808.com/menu"
+      ]
+    },
+    {
+      "url": "https://ironpan808.com/qr-code",
+      "path": "/qr-code",
+      "title": "QR Code - IRON PAN",
+      "meta_description": "Your feedback is highly appreciated and responses help us to serve you better.",
+      "status_code": 200,
+      "error": "",
+      "image_count": 6,
+      "asset_count": 14,
+      "internal_links": [
+        "https://ironpan808.com/",
+        "https://ironpan808.com/menu"
+      ]
+    }
+  ]
+}

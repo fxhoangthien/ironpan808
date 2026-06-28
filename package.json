@@ -1,0 +1,23 @@
+{
+  "name": "ironpan-rebuild",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "pages": "node scripts/build-pages-from-crawl.mjs",
+    "dev": "npm run pages && vite",
+    "dev:3000": "npm run pages && vite --port 3000",
+    "build": "npm run pages && vite build",
+    "preview": "vite preview",
+    "preview:3000": "vite preview --port 3000",
+    "compare:visual": "node scripts/visual-compare.mjs",
+    "compare": "node scripts/run-comparison.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "vite": "^6.3.5"
+  }
+}
