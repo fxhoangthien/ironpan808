@@ -41,15 +41,15 @@
   <header class="site-header" id="site-header">
   <div class="container site-header__inner">
     <a href="index.html" class="site-header__logo">
-      <img src="../assets/logos/logo-96826SE1-PROC4-IRON-PAN-redraw-png-scaled-e1779068559740-1024x436.png" alt="Vietnamese Restaurant in Honolulu, HI 96826" width="180" height="77" fetchpriority="high">
+      <img src="../assets/logos/logo-96826SE1-PROC4-IRON-PAN-redraw-png-scaled-e1779068559740-1024x436.png" alt="Vietnamese Restaurant in Honolulu, HI 96826" width="140" height="60" fetchpriority="high">
     </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html" class="site-nav__link">Home</a><a href="about-us.html" class="site-nav__link">About us</a><a href="menu.html" class="site-nav__link">Menu</a><a href="gallery.html" class="site-nav__link is-active">Gallery</a><a href="contact-us.html" class="site-nav__link">Contact us</a></nav>
+    <div class="site-header__actions">
+      <button type="button" class="btn btn--primary site-header__order" data-open-call-modal>Order Now</button>
+    </div>
     <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
       <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
     </button>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html" class="site-nav__link">Home</a><a href="about-us.html" class="site-nav__link">About us</a><a href="menu.html" class="site-nav__link">Menu</a><a href="gallery.html" class="site-nav__link is-active">Gallery</a><a href="contact-us.html" class="site-nav__link">Contact us</a></nav>
-    <div class="site-header__actions">
-      <a href="tel:8083657581" class="btn btn--primary site-header__order">Order Now</a>
-    </div>
   </div>
 </header>
   <section class="page-hero">
@@ -154,6 +154,39 @@
     <div class="site-footer__bottom">Copyright © 2026 IRON PAN</div>
   </div>
 </footer>
+  <dialog class="call-modal" id="call-modal" aria-labelledby="call-modal-title">
+  <div class="call-modal__panel">
+    <button type="button" class="call-modal__close" data-close-call-modal aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p class="call-modal__eyebrow">Call to order</p>
+    <h2 id="call-modal-title" class="call-modal__title">Ready to order?</h2>
+    <p class="call-modal__text">Call IRON PAN and we will take your order over the phone.</p>
+    <p class="call-modal__number">(808) 365-7581</p>
+    <div class="call-modal__actions">
+      <a href="tel:8083657581" class="btn btn--primary call-modal__call">Call now</a>
+      <button type="button" class="btn btn--outline" data-copy-phone data-phone="8083657581">
+        Copy number
+      </button>
+    </div>
+    <p class="call-modal__hint" data-copy-feedback hidden>Number copied</p>
+  </div>
+</dialog>
+  <dialog class="welcome-popup" id="welcome-popup" aria-label="IRON PAN announcement">
+  <div class="welcome-popup__panel">
+    <button type="button" class="welcome-popup__close" data-close-welcome-popup aria-label="Close announcement">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <img
+      class="welcome-popup__image"
+      src="../assets/images/photo_2026-05-18_12-49-41-2.jpg.webp"
+      alt="IRON PAN — We coming soon. A new experience is on the way at 2334 S King St Ste 101, Honolulu."
+      width="720"
+      height="1280"
+      decoding="async"
+    >
+  </div>
+</dialog>
   <script type="module" src="../js/main.js"></script>
 </body>
 </html>

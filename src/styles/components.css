@@ -103,14 +103,16 @@
 
 .about-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
 }
 
 .about-split__text {
   font-size: 1.0625rem;
+  line-height: 1.75;
   color: var(--color-text-muted);
+  max-width: 36rem;
 }
 
 .experience-grid {
@@ -145,19 +147,37 @@
 
 .about-values {
   display: grid;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
 }
 
 .about-value {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.25rem;
-  align-items: start;
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 1.75rem;
   background: var(--color-white);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+}
+
+.about-value h3 {
+  margin: 0;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.about-value p {
+  margin: 0;
+  font-size: 0.9875rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.about-split > div:first-child h2 {
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
 .about-value__icon {
@@ -508,4 +528,161 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--color-primary);
+}
+
+.call-modal {
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  max-width: calc(100vw - 2rem);
+  width: 400px;
+}
+
+.call-modal::backdrop {
+  background: rgba(33, 62, 54, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.call-modal__panel {
+  position: relative;
+  padding: 2rem 1.75rem 1.75rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.call-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-cream);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-modal__close:hover,
+.call-modal__close:focus-visible {
+  background: var(--color-cream-dark);
+}
+
+.call-modal__eyebrow {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+}
+
+.call-modal__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  text-align: center;
+}
+
+.call-modal__text {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.call-modal__number {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.call-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.call-modal__actions .btn {
+  min-width: 140px;
+}
+
+.call-modal__hint {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  color: var(--color-accent-hover);
+  font-weight: 500;
+}
+
+.call-modal__hint[hidden] {
+  display: none;
+}
+
+.welcome-popup {
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  max-width: min(420px, calc(100vw - 2rem));
+  width: 100%;
+  max-height: calc(100vh - 2rem);
+}
+
+.welcome-popup::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(3px);
+}
+
+.welcome-popup__panel {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #111;
+  box-shadow: var(--shadow-md);
+  line-height: 0;
+}
+
+.welcome-popup__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 2rem);
+  object-fit: contain;
+}
+
+.welcome-popup__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.welcome-popup__close:hover,
+.welcome-popup__close:focus-visible {
+  background: var(--color-white);
+  transform: scale(1.05);
 }

@@ -2,6 +2,7 @@ export const SITE = {
   name: "IRON PAN",
   tagline: "Vietnamese Restaurant in Honolulu, HI 96826",
   phone: "(808) 365-7581",
+  phoneDigits: "8083657581",
   phoneHref: "tel:8083657581",
   email: "ironpan808@gmail.com",
   address: "2334 S King St #101, Honolulu, HI 96826",
