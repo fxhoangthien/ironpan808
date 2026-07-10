@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "prepare:assets": "node scripts/prepare-assets.mjs",
-    "pages": "node scripts/build-pages-from-crawl.mjs",
+    "pages": "node scripts/build-pages.mjs",
     "dev": "npm run pages && vite",
     "dev:3000": "npm run pages && vite --port 3000",
     "build": "npm run pages && vite build",
