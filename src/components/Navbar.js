@@ -12,15 +12,15 @@ export function renderNavbar(activeSlug = "home") {
   return `<header class="site-header" id="site-header">
   <div class="container site-header__inner">
     <a href="index.html" class="site-header__logo">
-      <img src="${LOGO}" alt="${SITE.tagline}" width="180" height="77" fetchpriority="high">
+      <img src="${LOGO}" alt="${SITE.tagline}" width="140" height="60" fetchpriority="high">
     </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">${links}</nav>
+    <div class="site-header__actions">
+      <button type="button" class="btn btn--primary site-header__order" data-open-call-modal>Order Now</button>
+    </div>
     <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
       ${iconMenu}
     </button>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation">${links}</nav>
-    <div class="site-header__actions">
-      <a href="${SITE.orderHref}" class="btn btn--primary site-header__order">Order Now</a>
-    </div>
   </div>
 </header>`;
 }

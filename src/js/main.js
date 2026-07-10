@@ -17,6 +17,64 @@ function initMobileNav() {
   });
 }
 
+function initCallModal() {
+  const modal = document.getElementById("call-modal");
+  if (!modal) return;
+
+  const feedback = modal.querySelector("[data-copy-feedback]");
+  let feedbackTimer;
+
+  const open = () => {
+    if (typeof modal.showModal === "function") {
+      modal.showModal();
+    } else {
+      modal.setAttribute("open", "");
+    }
+  };
+
+  const close = () => {
+    if (typeof modal.close === "function") {
+      modal.close();
+    } else {
+      modal.removeAttribute("open");
+    }
+    if (feedback) {
+      feedback.hidden = true;
+      clearTimeout(feedbackTimer);
+    }
+  };
+
+  document.querySelectorAll("[data-open-call-modal]").forEach((trigger) => {
+    trigger.addEventListener("click", open);
+  });
+
+  modal.querySelectorAll("[data-close-call-modal]").forEach((btn) => {
+    btn.addEventListener("click", close);
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) close();
+  });
+
+  modal.querySelectorAll("[data-copy-phone]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const phone = btn.dataset.phone || "";
+      try {
+        await navigator.clipboard.writeText(phone);
+        if (feedback) {
+          feedback.hidden = false;
+          clearTimeout(feedbackTimer);
+          feedbackTimer = setTimeout(() => {
+            feedback.hidden = true;
+          }, 2000);
+        }
+      } catch {
+        window.prompt("Copy this number:", phone);
+      }
+    });
+  });
+}
+
 function initCarousel() {
   const carousel = document.querySelector("[data-carousel]");
   if (!carousel) return;
@@ -91,6 +149,60 @@ function initLightbox() {
   });
 }
 
+function initWelcomePopup() {
+  const modal = document.getElementById("welcome-popup");
+  if (!modal) return;
+
+  const storageKey = "ironpan-welcome-dismissed";
+
+  const close = () => {
+    if (typeof modal.close === "function") {
+      modal.close();
+    } else {
+      modal.removeAttribute("open");
+    }
+    try {
+      sessionStorage.setItem(storageKey, "1");
+    } catch {
+      /* ignore */
+    }
+  };
+
+  const open = () => {
+    if (typeof modal.showModal === "function") {
+      modal.showModal();
+    } else {
+      modal.setAttribute("open", "");
+    }
+  };
+
+  modal.querySelectorAll("[data-close-welcome-popup]").forEach((btn) => {
+    btn.addEventListener("click", close);
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) close();
+  });
+
+  modal.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    close();
+  });
+
+  let dismissed = false;
+  try {
+    dismissed = sessionStorage.getItem(storageKey) === "1";
+  } catch {
+    dismissed = false;
+  }
+
+  if (!dismissed) {
+    open();
+  }
+}
+
 initMobileNav();
+initCallModal();
+initWelcomePopup();
 initCarousel();
 initLightbox();

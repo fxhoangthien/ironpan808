@@ -11,7 +11,7 @@ export function renderHero() {
         <p class="hero__text">Some of the best memories begin around a hot pan and a warm loaf of bread. Inspired by the
 flavors of Vietnam and the relaxed island spirit of Honolulu, IRON PAN brings together
 comforting food, handcrafted flavors, and genuine hospitality in every meal.</p>
-        <a href="${SITE.orderHref}" class="btn btn--primary">Order Now</a>
+        <button type="button" class="btn btn--primary" data-open-call-modal>Order Now</button>
       </div>
       <div class="hero__image">
         <img src="${IMAGES.hero}" alt="" width="1280" height="853" loading="eager">
