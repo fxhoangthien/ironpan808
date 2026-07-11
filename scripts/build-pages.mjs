@@ -5,7 +5,6 @@ import { fileURLToPath } from "node:url";
 import { renderNavbar } from "../src/components/Navbar.js";
 import { renderFooter } from "../src/components/Footer.js";
 import { renderCallModal } from "../src/components/CallModal.js";
-import { renderWelcomePopup } from "../src/components/WelcomePopup.js";
 import { renderHero, renderPageHero } from "../src/components/Hero.js";
 import { renderHomeMenuPreview, renderMenuSection } from "../src/components/MenuSection.js";
 import { renderGalleryCarousel, renderGalleryGrid } from "../src/components/Gallery.js";
@@ -102,7 +101,6 @@ function pageShell({ title, description, slug, body, scripts = "../js/main.js" }
   ${body}
   ${slug === "qr-code" ? "" : renderFooter()}
   ${renderCallModal()}
-  ${renderWelcomePopup()}
   <script type="module" src="${scripts}"></script>
 </body>
 </html>`;
