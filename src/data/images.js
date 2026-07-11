@@ -10,7 +10,6 @@ export const IMAGES = {
   heroContact: "../assets/images/so-5-1024x342.jpg",
   heroGallery: "../assets/images/Pan-5.jpg",
   qrPhoto: "../assets/images/photo_2026-05-18_12-49-41-2.jpg",
-  welcomePromo: "../assets/images/photo_2026-05-18_12-49-41-2.jpg.webp",
   homeCarousel: [
     "../assets/images/2-1-1.jpg",
     "../assets/images/16-819x1024.jpg",

@@ -149,60 +149,7 @@ function initLightbox() {
   });
 }
 
-function initWelcomePopup() {
-  const modal = document.getElementById("welcome-popup");
-  if (!modal) return;
-
-  const storageKey = "ironpan-welcome-dismissed";
-
-  const close = () => {
-    if (typeof modal.close === "function") {
-      modal.close();
-    } else {
-      modal.removeAttribute("open");
-    }
-    try {
-      sessionStorage.setItem(storageKey, "1");
-    } catch {
-      /* ignore */
-    }
-  };
-
-  const open = () => {
-    if (typeof modal.showModal === "function") {
-      modal.showModal();
-    } else {
-      modal.setAttribute("open", "");
-    }
-  };
-
-  modal.querySelectorAll("[data-close-welcome-popup]").forEach((btn) => {
-    btn.addEventListener("click", close);
-  });
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) close();
-  });
-
-  modal.addEventListener("cancel", (event) => {
-    event.preventDefault();
-    close();
-  });
-
-  let dismissed = false;
-  try {
-    dismissed = sessionStorage.getItem(storageKey) === "1";
-  } catch {
-    dismissed = false;
-  }
-
-  if (!dismissed) {
-    open();
-  }
-}
-
 initMobileNav();
 initCallModal();
-initWelcomePopup();
 initCarousel();
 initLightbox();
