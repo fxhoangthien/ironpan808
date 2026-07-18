@@ -9,7 +9,13 @@ export const SITE = {
   mapsUrl: "https://maps.app.goo.gl/Eq9xDBvcoLT6KHvX7",
   mapsEmbed:
     "https://maps.google.com/maps?q=2334%20S%20King%20St%20%23101%2C%20Honolulu%2C%20HI%2096826&t=m&z=18&output=embed&iwloc=near",
-  hours: ["Mon - Sun:", "07:00 AM - 02:00 PM", "04:00 PM - 09:00 PM"],
+  hours: [
+    "Mon, Wed - Sun:",
+    "07:00 AM - 02:00 PM",
+    "04:00 PM - 09:00 PM",
+    "Tue:",
+    "07:00 AM - 03:00 PM",
+  ],
   social: {
     facebook: "https://www.facebook.com/ironpanhi/",
     instagram: "https://www.instagram.com/ironpan808/",
