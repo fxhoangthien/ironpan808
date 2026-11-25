@@ -64,7 +64,7 @@ export const FULL_MENU = [
     id: "sides",
     name: "SIDES",
     items: [
-      { name: "Beef / Meatball / Grilled Pork", price: "$4" },
+      { name: "Beef / Meatball / Grilled Pork", price: "$6.49" },
       { name: "Assorted Cold Cut", price: "$3" },
       { name: "Banh Mi", price: "$3" },
     ],
